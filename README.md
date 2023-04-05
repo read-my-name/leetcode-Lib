@@ -5,14 +5,14 @@ Welcome to Algo lib respository. I want to share the question that I have met an
 
 ## Content
 <details open>
-    <summary>1. Update 1 question daily</summary>
+    <summary>1. Update 1 question at regular time</summary>
     <ul>
         <li>Mostly on weekdays</li>
         <li>At night or midnight</li>
     </ul>
 </details>
 <details open>
-    <summary>2. Provide Explantion on each solution</summary>
+    <summary>2. Try to provide explantion and details on each solution</summary>
     <ul>
         <li>Time Complexity</li>
         <li>Space Complexity</li>
