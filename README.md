@@ -5,7 +5,7 @@ Welcome to leetcode lib sharing respository. I would like to share the question 
 
 ## Content
 <details open>
-    <summary>1. Update 1 question at regular time</summary>
+    <summary>1. Update questions at regular time</summary>
     <ul>
         <li>Mostly on weekdays</li>
         <li>At night or midnight</li>
