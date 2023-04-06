@@ -1,7 +1,7 @@
 # Leetcode Answer and Explanation
 
 ## Introduction
-Welcome to Algo lib respository. I want to share the question that I have met and discover from leetcode at here.
+Welcome to leetcode lib sharing respository. I would like to share the question that I have discovered and solved from leetcode at here.
 
 ## Content
 <details open>
