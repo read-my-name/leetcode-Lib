@@ -1,7 +1,7 @@
 # Leetcode Answer and Explanation
 
 ## Introduction
-Welcome to leetcode lib sharing respository. I would like to share the question that I have discovered and solved from leetcode at here.
+Welcome to leetcode lib sharing respository. I would like to share the question that I have discovered and learnt from leetcode.
 
 ## Content
 <details open>
