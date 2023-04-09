@@ -17,30 +17,30 @@ std::string CMedium::convert(std::string s, int numRows)
         return s;
     }
     std::vector<std::string> list(numRows, "");
-    int currentLine = 0;
-    bool reachedEdge = true;
+    int icurRow = 0;
+    bool isEdge = true;
 
     for (int i = 0; i < s.length(); ++i) 
     {
-        if (currentLine == 0 || currentLine == numRows - 1) 
-        {
-            reachedEdge = !reachedEdge;
+        if (icurRow == 0 || icurRow == numRows - 1)
+        {// use a pointer to check the limit of row
+            isEdge = !isEdge;
         }
-        list.at(currentLine) += s.at(i);
-        if (!reachedEdge) 
+        list.at(icurRow) += s.at(i);
+        if (!isEdge)
         {
-            currentLine++;
+            icurRow++;
         }
         else 
         {
-            currentLine--;
+            icurRow--;
         }
     }
 
-    std::string result;
+    std::string sRes;
     for (int i = 0; i < numRows; ++i) 
     {
-        result += list.at(i);
+        sRes += list.at(i);
     }
-    return result;
+    return sRes;
 }
