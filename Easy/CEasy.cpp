@@ -11,7 +11,7 @@ CEasy::~CEasy()
 }
 
 bool CEasy::isPalindrome(int iX)
-{
+{// 9. Palindrome Number
 	bool bRes = false;
 	if (iX <= 0 || iX%10 == 0)
 	{
