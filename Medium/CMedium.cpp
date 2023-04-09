@@ -44,3 +44,28 @@ std::string CMedium::convert(std::string s, int numRows)
     }
     return sRes;
 }
+
+int CMedium::reverse(int iNum)
+{ //7. Reverse Integer
+    if (iNum / 10 == 0)
+    {// if the input is one digit
+        return iNum;
+    }
+
+    int iRem = 0;
+    // if use integer will exceed the limit
+    long lTemp = 0;
+    while (iNum) // if more than 0 will always true
+    {// get the last digit by finding the remainder, times 10 and add into lTemp
+        iRem = iNum % 10;
+        lTemp = lTemp * 10 + iRem;
+        iNum /= 10;
+    }
+
+    if (lTemp > INT_MAX || lTemp < INT_MIN)
+    {// if exceed return 0
+        return 0;
+    }
+
+    return lTemp;
+}
