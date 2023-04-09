@@ -1,2 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# ignore ALL .log files
+*.bak
+
+# ignore ALL files in ANY directory named temp
+# temp/
