@@ -69,3 +69,32 @@ int CMedium::reverse(int iNum)
 
     return lTemp;
 }
+
+int CMedium::myAtoi(std::string s)
+{// 8. String to Integer (atoi)
+    int len = s.size();
+    long num = 0;
+    int i = 0;
+
+    while (i < len && s[i] == ' ')
+    {
+        i++;
+    }
+    bool negative = s[i] == '-';
+
+    if (s[i] == '+' || s[i] == '-')
+    {
+        i++;
+    }
+    while (i < len && isdigit(s[i]))
+    {// minus '0' = convert the digit and add 0 on it
+        num = num * 10 + (s[i] - '0');
+
+        if (num > INT_MAX || (negative && -num < INT_MIN))
+        {
+            return negative ? INT_MIN : INT_MAX;
+        }
+        i++;
+    }
+    return negative ? -num : num;
+}

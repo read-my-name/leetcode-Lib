@@ -9,5 +9,7 @@ public:
 
 public:
 	std::string convert(std::string s, int numRows);
+	int reverse(int x);
+	int myAtoi(std::string s);
 };
 
