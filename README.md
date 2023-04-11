@@ -20,7 +20,7 @@ Welcome to leetcode lib sharing respository. I would like to share the question 
 </details>
 
 ## Most Common Used Language
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=read-my-name&exclude_repo=trading_system,read_my_name,Docker_Container,react-tutorial)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=read-my-name&exclude_repo=trading_system,read_my_name,Docker_Container,react-tutorial,Library)](https://github.com/anuraghazra/github-readme-stats)
 
 
 
