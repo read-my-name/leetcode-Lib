@@ -1,4 +1,6 @@
 #pragma once
+#include "include.h"
+
 class CEasy
 {
 public:
@@ -7,5 +9,6 @@ public:
 
 public:
 	bool isPalindrome(int x);
+	std::string longestCommonPrefix(std::vector<std::string>& strs);
 };
 

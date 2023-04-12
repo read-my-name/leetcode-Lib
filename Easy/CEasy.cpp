@@ -31,3 +31,24 @@ bool CEasy::isPalindrome(int iX)
 	// iX == iBack/10 remove the iBack's last digit by using /10
 	return (iX == iBack || iX == iBack / 10);
 }
+
+std::string longestCommonPrefix(std::vector<std::string>& strs) 
+{// 14. Longest Common Prefix
+	// sort it before comparing, it can reduce the time complexity
+	sort(strs.begin(), strs.end());
+	int nlen = strs.size();
+	std::string s1 = strs[0], s2 = strs[nlen - 1], sOut = "";
+	for (int i = 0; i < s1.size(); i++) 
+	{//Due to the sorting, can direct compare both 1st and last
+		if (s1[i] == s2[i]) 
+		{ 
+			sOut += s1[i]; 
+		}
+		else
+		{// if not equal then break the function
+			break;
+		}
+	}
+	return sOut;
+}
+
