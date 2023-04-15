@@ -14,5 +14,7 @@ public:
 	int maxArea(std::vector<int>& height);
 	std::string intToRoman(int num);
 	int romanToInt(std::string s);
+	std::vector<std::vector<int>> threeSum(std::vector<int>& nums);
+	int threeSumClosest(std::vector<int>& nums, int target);
 };
 

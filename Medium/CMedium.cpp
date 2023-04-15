@@ -157,3 +157,78 @@ int CMedium::romanToInt(std::string s)
     }
     return ans;
 }
+
+std::vector<std::vector<int>> CMedium::threeSum(std::vector<int>& nums) 
+{// 15. 3Sum
+    int iTarget = 0;
+    // sort it for easier to manipulate the sums
+    std::sort(nums.begin(), nums.end());
+    // the reason of using set instead of vector is that set can store distinct value
+    std::set<std::vector<int>> sOut;
+    std::vector<std::vector<int>> vOut;
+    for (int i = 0; i < nums.size() - 2; i++) // have used n-1 in our looping
+    {
+        int j = i + 1;
+        int k = nums.size() - 1;
+        while (j < k)
+        {
+            int iSum = nums[i] + nums[j] + nums[k];
+            if (iSum == iTarget)
+            {// if it is 0 then shorten the j and k
+                sOut.insert({ nums[i],nums[j],nums[k] });
+                j++;
+                k--;
+            }
+            else if (iSum < iTarget)
+            {// here can be written in iSum > iTarget, it works too.
+                j++;
+            }
+            else
+            {
+                k--;
+            }
+        }
+    }
+    //store into vector
+    for (auto triplets : sOut)
+    {
+        vOut.push_back(triplets);
+    }
+    return vOut;
+}
+
+int CMedium::threeSumClosest(std::vector<int>& nums, int target)
+{
+    sort(nums.begin(), nums.end());
+    int n = nums.size();
+    int iSum = nums[0] + nums[1] + nums[2];
+    for (int i = 0; i < n - 2; i++)
+    {
+        int j = i + 1;
+        int k = n - 1;
+        while (j < k)
+        {
+            int iTemp = nums[i] + nums[j] + nums[k];
+            if (iTemp == target)
+            {
+                iSum = iTemp;
+                return iSum;
+            }
+            else if (abs(iTemp - target) < abs(iSum - target))
+            {
+                iSum = iTemp;
+            }
+            else if (iTemp < target)
+            {
+                j++;
+            }
+            else
+            {
+                k--;
+            }
+        }
+    }
+    return iSum;
+}
+
+
