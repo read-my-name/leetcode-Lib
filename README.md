@@ -1,7 +1,15 @@
 # Leetcode Answer and Explanation
 
 ## Introduction
-Welcome to leetcode lib sharing respository. I would like to share the question that I have discovered and learnt from leetcode.
+<div align="center">
+  
+  <h1>
+    Welcome to leetcode lib sharing respository. 
+    <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
+  </h1>
+    I would like to share the question that I have discovered and learnt from leetcode.
+   <img src="https://komarev.com/ghpvc/?username=read-my-name&style=flat-square&color=blue" alt=""/>
+</div>
 
 ## Content
 <details open>
