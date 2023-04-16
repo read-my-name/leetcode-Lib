@@ -198,10 +198,11 @@ std::vector<std::vector<int>> CMedium::threeSum(std::vector<int>& nums)
 }
 
 int CMedium::threeSumClosest(std::vector<int>& nums, int target)
-{
+{// 16. 3Sum Closest
     sort(nums.begin(), nums.end());
     int n = nums.size();
     int iSum = nums[0] + nums[1] + nums[2];
+
     for (int i = 0; i < n - 2; i++)
     {
         int j = i + 1;
@@ -210,20 +211,20 @@ int CMedium::threeSumClosest(std::vector<int>& nums, int target)
         {
             int iTemp = nums[i] + nums[j] + nums[k];
             if (iTemp == target)
-            {
+            {// best case
                 iSum = iTemp;
                 return iSum;
             }
             else if (abs(iTemp - target) < abs(iSum - target))
-            {
+            {// do not modify j and k here since we need to go thru the both case below
                 iSum = iTemp;
             }
             else if (iTemp < target)
-            {
+            {// case 1
                 j++;
             }
             else
-            {
+            {// case 2
                 k--;
             }
         }
@@ -231,4 +232,29 @@ int CMedium::threeSumClosest(std::vector<int>& nums, int target)
     return iSum;
 }
 
+std::vector<std::string> CMedium::letterCombinations(std::string digits) 
+{// 17. Letter Combinations of a Phone Number
+    if (digits.empty()) 
+    {// if no number entered
+        return {};
+    }
+    // 0 and 1 will be null
+    std::vector<std::string> vPad = { "", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+    std::vector<std::string> vOut;
+    vOut.push_back("");
+    for (char chKey : digits) 
+    {
+        std::vector<std::string> vTemp;
+        for (char ch1 : vPad[chKey - '0']) 
+        {// seperate char from keypad
+            for (std::string s2 : vOut) 
+            {// retrieve string back from previous vector
+                vTemp.push_back(s2 + ch1);
+            }
+        }
+        vOut.clear();
+        vOut = vTemp;
+    }
+    return vOut;
+}
 
