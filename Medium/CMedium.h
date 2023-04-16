@@ -16,5 +16,6 @@ public:
 	int romanToInt(std::string s);
 	std::vector<std::vector<int>> threeSum(std::vector<int>& nums);
 	int threeSumClosest(std::vector<int>& nums, int target);
+	std::vector<std::string> letterCombinations(std::string digits);
 };
 
