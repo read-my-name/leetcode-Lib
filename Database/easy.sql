@@ -4,4 +4,3 @@ FROM person p
 LEFT JOIN address a
 ON p.personid = a.personid
 
----
