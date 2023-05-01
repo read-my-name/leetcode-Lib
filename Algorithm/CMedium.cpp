@@ -334,10 +334,24 @@ std::vector<std::vector<int> > CMedium::fourSum(std::vector<int>& num, int targe
         {
             ++i;
         }
-
     }
-
     return res;
+}
 
+std::vector<std::vector<std::string>> groupAnagrams(std::vector<std::string>& strs) 
+{// 49. Group Anagrams
+    std::unordered_map<std::string, std::vector<std::string>> um;
+    for (std::string s : strs) 
+    {// sort the string and make it as a key
+        std::string t = s;
+        sort(t.begin(), t.end());
+        um[t].push_back(s);
+    }
+    std::vector < std::vector<std::string >> vAnagram;
+    for (auto p : um) 
+    {// store the vector of string into vector
+        vAnagram.push_back(p.second);
+    }
+    return vAnagram;
 }
 
